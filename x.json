@@ -1,0 +1,48 @@
+{
+  "name": "sift",
+  "description": "Sift for Chiχ",
+  "version": "0.0.2",
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/nodule/sift.git"
+  },
+  "dependencies": {
+    "nedb": "^1.1.1"
+  },
+  "nodes": [
+    {
+      "ports": {
+        "input": {
+          "filter": {
+            "title": "Filter",
+            "type": "any"
+          },
+          "in": {
+            "title": "Document",
+            "type": "object",
+            "async": true
+          }
+        },
+        "output": {
+          "out": {
+            "title": "New Document",
+            "type": "object"
+          },
+          "error": {
+            "title": "Error",
+            "type": "Error"
+          }
+        }
+      },
+      "phrases": {
+        "active": "Filtering array"
+      },
+      "async": true,
+      "description": "MongoDB inspired array filtering",
+      "ns": "sift",
+      "name": "filter",
+      "fn": "on.input.in = function() {\n  try {\n    output({out: sift(input.filter, data)});\n  } catch (e) {\n    output({error: e});\n  }\n};\n"
+    }
+  ],
+  "twigs": []
+}
