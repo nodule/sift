@@ -6,6 +6,11 @@
   "phrases": {
     "active": "Filtering array"
   },
+  "dependencies": {
+    "npm": {
+      "sift": "latest"
+    }
+  },
   "ports": {
     "input": {
       "filter": {

@@ -14,14 +14,14 @@
   "scripts": {
     "test": "chit -r"
   },
-  "dependencies": {
-    "nedb": "^1.1.1"
-  },
   "devDependencies": {
     "chit": "0.x.x"
   },
   "chix": {
     "name": "sift",
     "color": "rgb(136,0,35)"
+  },
+  "dependencies": {
+    "sift": "^0.2.3"
   }
 }

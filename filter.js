@@ -6,6 +6,11 @@ module.exports = {
   phrases: {
     active: "Filtering array"
   },
+  dependencies: {
+    npm: {
+      sift: require('sift')
+    }
+  },
   ports: {
     input: {
       filter: {
@@ -16,7 +21,7 @@ module.exports = {
         title: "Document",
         type: "object",
         async: true,
-        fn: function __IN__(data, x, source, state, input, output) {
+        fn: function __IN__(data, x, source, state, input, output, sift) {
           var r = function() {
             try {
               output({
