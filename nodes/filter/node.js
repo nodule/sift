@@ -1,7 +1,7 @@
 on.input.in = function() {
   try {
-    output({out: sift($.filter, $.in)});
+    output({out: $.create(sift($.filter, $.in))});
   } catch (e) {
-    output({error: e});
+    output({error: $.create(e)});
   }
 };
