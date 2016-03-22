@@ -25,11 +25,11 @@ module.exports = {
           var r = function() {
             try {
               output({
-                out: sift(input.filter, data)
+                out: $.create(sift($.filter, $.in))
               });
             } catch (e) {
               output({
-                error: e
+                error: $.create(e)
               });
             }
           }.call(this);

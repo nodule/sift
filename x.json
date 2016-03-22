@@ -46,7 +46,7 @@
       "description": "MongoDB inspired array filtering",
       "ns": "sift",
       "name": "filter",
-      "fn": "on.input.in = function() {\n  try {\n    output({out: sift(input.filter, data)});\n  } catch (e) {\n    output({error: e});\n  }\n};\n"
+      "fn": "on.input.in = function() {\n  try {\n    output({out: $.create(sift($.filter, $.in))});\n  } catch (e) {\n    output({error: $.create(e)});\n  }\n};\n"
     }
   ],
   "twigs": []
