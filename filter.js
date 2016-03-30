@@ -21,7 +21,7 @@ module.exports = {
         title: "Document",
         type: "object",
         async: true,
-        fn: function __IN__(data, x, source, state, input, output, sift) {
+        fn: function __IN__(data, source, state, input, $, output, sift) {
           var r = function() {
             try {
               output({
